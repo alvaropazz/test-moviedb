@@ -1,9 +1,12 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import Carrousel from "./components/Carrousel";
 
 const App = () => {
   return (
     <div className="wrapper" data-testid="wrapper">
-      hola
+      <Header />
+      <Carrousel title={"Sample"} subtitle={"sample text"} />
     </div>
   );
 };
