@@ -2,6 +2,7 @@ import React from "react";
 import CarrouselItem from "./components/CarrouselItem";
 import CarrouselButton from "./components/CarrouselButton";
 import { CarrouselWrapper } from "./styles";
+import { fetchTopMovies } from "./utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,7 +33,10 @@ const Carrousel = ({ title, subtitle }) => {
         </div>
         <div className="carrousel-buttons">
           <CarrouselButton direction="left" onClick={direction} />
-          <CarrouselButton direction="right" onClick={direction} />
+          <CarrouselButton
+            direction="right"
+            onClick={() => fetchTopMovies(1)}
+          />
         </div>
       </div>
     </CarrouselWrapper>
