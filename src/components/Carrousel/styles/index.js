@@ -31,10 +31,28 @@ export const CarrouselWrapper = styled.div`
   }
 
   .carrousel-content {
-    border: 1px solid blue;
-    min-height: 30rem;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0 0 0;
+    border: 5px solid black;
+    padding: 1rem;
+    position: relative;
+
+    .carrousel-content-items {
+      border: 1px solid blue;
+      min-height: 30rem;
+      display: flex;
+      padding: 1rem;
+    }
+
+    .carrousel-buttons {
+      border: 1px solid orange;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      height: 5rem;
+      width: 100%;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      z-index: 1;
+    }
   }
 `;
