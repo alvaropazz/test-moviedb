@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
 export const CarrouselItemWrapper = styled.div`
-  border: 1px solid green;
+  background-color: #f5f5f5;
+  border: 4px solid green;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 1rem 0 0;
   flex 1;
-`;
+  height: 40vh;
+  width: 90%;
 
-export const CarrouselButtonWrapper = styled.button`
-  border: 3px solid red;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 10rem;
 `;

@@ -1,13 +1,30 @@
 import React from "react";
-import CarrouselItem from "./components/CarrouselItem";
-import CarrouselButton from "./components/CarrouselButton";
+import "./styles/index.js";
 import { CarrouselWrapper } from "./styles";
-import { fetchTopMovies } from "./utils";
+import CarrouselItem from "./components/CarrouselItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
-const Carrousel = ({ title, subtitle }) => {
-  const direction = () => console.log("direction");
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const Carrousel = ({ title, subtitle, data }) => {
+  const movieItems = data?.results;
+
+  const carrouselStyle = {
+    width: "100vw",
+    backgroundColor: "#000",
+    display: "flex",
+    padding: "0 5rem",
+    marginTop: "2rem",
+  };
+
+  const slideStyle = {
+    minHeight: "45vh",
+  };
 
   return (
     <CarrouselWrapper>
@@ -22,23 +39,30 @@ const Carrousel = ({ title, subtitle }) => {
         <p>{subtitle}</p>
       </div>
 
-      <div className="carrousel-content">
-        <div className="carrousel-content-items">
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-          <CarrouselItem title={"Movie title"} date={"01 01 2000"} />
-        </div>
-        <div className="carrousel-buttons">
-          <CarrouselButton direction="left" onClick={direction} />
-          <CarrouselButton
-            direction="right"
-            onClick={() => fetchTopMovies(1)}
-          />
-        </div>
-      </div>
+      <Swiper
+        slidesPerView={6}
+        centeredSlides={false}
+        spaceBetween={1}
+        pagination={{
+          type: "fraction",
+        }}
+        translate={[0, 0, 0]}
+        navigation={true}
+        modules={[Navigation]}
+        style={carrouselStyle}
+        className="swiper-container"
+      >
+        {movieItems?.map((movie) => {
+          return (
+            <SwiperSlide style={slideStyle}>
+              <CarrouselItem
+                title={movie.title}
+                subtitle={movie.release_date}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </CarrouselWrapper>
   );
 };

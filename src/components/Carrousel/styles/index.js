@@ -1,23 +1,18 @@
 import styled from "styled-components";
 
 export const CarrouselWrapper = styled.div`
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  min-height: 40vh;
-  padding: 2rem;
-  justify-content: space-between;
-  margin: 2rem 0 0 0;
+  margin-top: 1rem;
 
   .carrousel-header {
-    border: 1px solid blue;
+    padding: 0 2rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    max-width: 70%;
 
     .carrousel-header-title {
       display: flex;
       align-items: center;
-      margin: 1rem 0 0 0;
 
       h2 {
         font-size: 2rem;
@@ -25,34 +20,22 @@ export const CarrouselWrapper = styled.div`
     }
 
     p {
-      margin: 2rem 0 0 0;
-      width: 20%;
+      margin-top: 1rem;
+      font-size: 1.5rem;
     }
   }
+  .swiper-container div[class^="swiper-button"] {
+    background-color: #5031a9;
+    padding: 2rem;
+    border-radius: 3rem;
+    width: 6rem;
+    height: auto;
+    top: 45%;
+  }
 
-  .carrousel-content {
-    border: 5px solid black;
-    padding: 1rem;
-    position: relative;
-
-    .carrousel-content-items {
-      border: 1px solid blue;
-      min-height: 30rem;
-      display: flex;
-      padding: 1rem;
-    }
-
-    .carrousel-buttons {
-      border: 1px solid orange;
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-between;
-      height: 5rem;
-      width: 100%;
-      position: absolute;
-      top: 40%;
-      left: 0;
-      z-index: 1;
-    }
+  .swiper-container div[class^="swiper-button"]:after {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
   }
 `;

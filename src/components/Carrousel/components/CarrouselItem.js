@@ -4,8 +4,11 @@ import { CarrouselItemWrapper } from "./styles";
 const CarrouselItem = ({ title, date }) => {
   return (
     <CarrouselItemWrapper>
-      <h2>{title}</h2>
-      <p>{date}</p>
+      <img className="item-image" src={""} alt="movie-poster" />
+      <div className="item-text">
+        <h2>{title}</h2>
+        <p>{date}</p>
+      </div>
     </CarrouselItemWrapper>
   );
 };

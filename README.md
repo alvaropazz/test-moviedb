@@ -14,7 +14,7 @@ Para ello utilizaremos como fuente de información la API proporcionada por The 
 
 El objetivo es construir una plataforma para ver información sobre películas que deberán aparecer listadas según ciertas clasificaciones: más populares [documentacion](https://developers.themoviedb.org/3/movies/get-popular-movies)
 , mejor evaluadas [documentacion](https://developers.themoviedb.org/3/movies/get-top-rated-movies), próximos estrenos [documentacion](https://developers.themoviedb.org/3/movies/get-upcoming).
-Además debe permitir visualizar información más detallada de cada película [documentación](https://developers.themoviedb.org/3/movies/get-upcoming). Considerar las pantallas Home y Movie del Figma como guías de diseño.
+Además debe permitir visualizar información más detallada de cada película [documentación](https://developers.themoviedb.org/3/movies/get-movie-details). Considerar las pantallas Home y Movie del Figma como guías de diseño.
 
 ## Qué se evaluará:
 
