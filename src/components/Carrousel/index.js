@@ -17,10 +17,9 @@ const Carrousel = ({ title, subtitle, data }) => {
 
   const carrouselStyle = {
     width: "100vw",
-    backgroundColor: "#000",
     display: "flex",
     padding: "0 5rem",
-    marginTop: "2rem",
+    marginTop: "4rem",
   };
 
   const slideStyle = {
@@ -59,7 +58,7 @@ const Carrousel = ({ title, subtitle, data }) => {
               <CarrouselItem
                 title={movie.title}
                 release_date={movie.release_date}
-                image_source={`${MOVIE_DB_CONFIG.images.base_url}${MOVIE_DB_CONFIG.images.poster_sizes[6]}${movie.backdrop_path}`}
+                image_source={`${MOVIE_DB_CONFIG.images.base_url}${MOVIE_DB_CONFIG.images.poster_sizes[6]}${movie.poster_path}`}
               />
             </SwiperSlide>
           );

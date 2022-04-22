@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CarrouselWrapper = styled.div`
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   .carrousel-header {
     padding: 0 2rem;
@@ -20,8 +20,11 @@ export const CarrouselWrapper = styled.div`
     }
 
     p {
-      margin-top: 1rem;
+      margin-top: 2rem;
       font-size: 1.5rem;
+      word-spacing: 0.05rem;
+      letter-spacing: 0.05rem;
+      line-height: 1.25;
     }
   }
   .swiper-container div[class^="swiper-button"] {
