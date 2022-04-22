@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { MOVIE_DB_CONFIG } from "../../locales";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -54,10 +55,11 @@ const Carrousel = ({ title, subtitle, data }) => {
       >
         {movieItems?.map((movie) => {
           return (
-            <SwiperSlide style={slideStyle}>
+            <SwiperSlide style={slideStyle} key={movie.title}>
               <CarrouselItem
                 title={movie.title}
-                subtitle={movie.release_date}
+                release_date={movie.release_date}
+                image_source={`${MOVIE_DB_CONFIG.images.base_url}${MOVIE_DB_CONFIG.images.poster_sizes[6]}${movie.backdrop_path}`}
               />
             </SwiperSlide>
           );

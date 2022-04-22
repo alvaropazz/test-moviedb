@@ -1,5 +1,13 @@
 const API_KEY = "e08815ebb9a68b5816a9e3ae26b751e1";
 
+export const MOVIE_DB_CONFIG = {
+  images: {
+    base_url: "http://image.tmdb.org/t/p/",
+    secure_base_url: "https://image.tmdb.org/t/p/",
+    poster_sizes: ["w92", "w154", "w185", "w342", "w500", "w780", "original"],
+  },
+};
+
 export const popular = {
   title: "Popular",
   subtitle:
