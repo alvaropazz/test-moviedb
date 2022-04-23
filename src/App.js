@@ -4,6 +4,7 @@ import { popular, topRated, upcoming } from "./locales";
 import { fetchMovies } from "./utils";
 import Header from "./components/Header";
 import Carrousel from "./components/Carrousel";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -19,6 +20,15 @@ const App = () => {
       setTopMovieBackdrop(data.results[0].backdrop_path)
     );
   }, []);
+
+  const [show, setShow] = useState(false);
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const hideModal = () => {
+    setShow(false);
+  };
 
   return (
     <div className="wrapper" data-testid="wrapper">
@@ -38,6 +48,14 @@ const App = () => {
         subtitle={upcoming.subtitle}
         data={upcomingMovies}
       />
+
+      <button
+        type="button"
+        onClick={() => showModal()}
+        style={{ height: "1vh" }}
+      ></button>
+
+      <Modal handleClose={hideModal} show={show} />
     </div>
   );
 };
