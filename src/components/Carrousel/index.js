@@ -1,6 +1,11 @@
 import React from "react";
 import "./styles/index.js";
-import { CarrouselWrapper } from "./styles";
+import {
+  CarrouselWrapper,
+  carrouselStyle,
+  carrouselBreakpoints,
+  slideStyle,
+} from "./styles";
 import CarrouselItem from "./components/CarrouselItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -14,35 +19,6 @@ import "swiper/css/navigation";
 
 const Carrousel = ({ title, subtitle, data }) => {
   const movieItems = data?.results;
-
-  const carrouselStyle = {
-    display: "flex",
-    padding: "0 5rem",
-    marginTop: "4rem",
-  };
-
-  const slideStyle = {
-    minHeight: "45vh",
-  };
-
-  const carrouselBreakpoints = {
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-
-    992: {
-      slidesPerView: 4,
-    },
-    1200: {
-      slidesPerView: 5,
-    },
-    1400: {
-      slidesPerView: 6,
-    },
-  };
 
   return (
     <CarrouselWrapper>

@@ -43,3 +43,32 @@ export const CarrouselWrapper = styled.div`
     font-weight: bold;
   }
 `;
+
+export const carrouselStyle = {
+  display: "flex",
+  padding: "0 5rem",
+  marginTop: "4rem",
+};
+
+export const slideStyle = {
+  minHeight: "45vh",
+};
+
+export const carrouselBreakpoints = {
+  576: {
+    slidesPerView: 2,
+  },
+  768: {
+    slidesPerView: 3,
+  },
+
+  992: {
+    slidesPerView: 4,
+  },
+  1200: {
+    slidesPerView: 5,
+  },
+  1400: {
+    slidesPerView: 6,
+  },
+};
