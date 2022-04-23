@@ -20,6 +20,14 @@ export const CarrouselItemWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 1.5rem;
+    min-height: 3rem;
+    overflow: hidden;
+
+    h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     p {
       margin-top: 0.5rem;

@@ -16,7 +16,6 @@ const Carrousel = ({ title, subtitle, data }) => {
   const movieItems = data?.results;
 
   const carrouselStyle = {
-    width: "100vw",
     display: "flex",
     padding: "0 5rem",
     marginTop: "4rem",
@@ -24,6 +23,25 @@ const Carrousel = ({ title, subtitle, data }) => {
 
   const slideStyle = {
     minHeight: "45vh",
+  };
+
+  const carrouselBreakpoints = {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+
+    992: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 6,
+    },
   };
 
   return (
@@ -40,13 +58,12 @@ const Carrousel = ({ title, subtitle, data }) => {
       </div>
 
       <Swiper
-        slidesPerView={6}
         centeredSlides={false}
         spaceBetween={1}
         pagination={{
           type: "fraction",
         }}
-        translate={[0, 0, 0]}
+        breakpoints={carrouselBreakpoints}
         navigation={true}
         modules={[Navigation]}
         style={carrouselStyle}

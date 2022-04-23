@@ -6,7 +6,7 @@ const CarrouselItem = ({ title, release_date, image_source }) => {
     <CarrouselItemWrapper>
       <img className="item-image" src={image_source} alt="movie-poster" />
       <div className="item-text">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{release_date}</p>
       </div>
     </CarrouselItemWrapper>
