@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const CarrouselWrapper = styled.div`
   margin-top: 2rem;
+  padding: 0 2rem;
 
   .carrousel-header {
-    padding: 0 2rem;
+    padding: 0 5rem;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;

@@ -9,16 +9,20 @@ const App = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [topMovieBackdrop, setTopMovieBackdrop] = useState([]);
 
   useEffect(() => {
     fetchMovies(popular.url).then((data) => setPopularMovies(data));
     fetchMovies(topRated.url).then((data) => setTopRatedMovies(data));
     fetchMovies(upcoming.url).then((data) => setUpcomingMovies(data));
+    fetchMovies(popular.url).then((data) =>
+      setTopMovieBackdrop(data.results[0].backdrop_path)
+    );
   }, []);
 
   return (
     <div className="wrapper" data-testid="wrapper">
-      <Header />
+      <Header backdrop={topMovieBackdrop} />
       <Carrousel
         title={popular.title}
         subtitle={popular.subtitle}
