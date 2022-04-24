@@ -1,3 +1,22 @@
+# Documentación
+
+- Este proyecto de React implementa el front end de una databse de películas.
+- Hace uso del `fetch` api de Javascript para realizar peticiones a The Movie DB.
+- La estructura del proyecto abstrae en componentes los elementos más importantes para evitar la repetición de código.
+- Se hace uso de React Hooks para el manejo de estado, el cual se encuentra principalmente ubicado en `App.js` y desde ahí - se lo distribuye a los componentes hijos.
+- Se evita el uso de "magic strings" y se ha ubicado el copy que se utiliza en el proyecto en archivos `.json`.
+- Para el carrousel se hizo uso de la librería `Swiper.js`.
+
+## Instrucciones
+
+- Para iniciar el proyecto:
+  - Clonar el proyecto de github: `https://github.com/alvaropazz/test-moviedb.git`
+  - Entrar al proyecto: `cd test-moviedb`
+  - Instalar las dependencias necesarias: `yarn`
+  - Inicializar el proyecto usando: `yarn start`
+
+---
+
 # Prueba Técnica Frontend Developers
 
 Necesitamos que desarrolles una aplicación web utilizando React, que será nuestro catálogo de películas.
