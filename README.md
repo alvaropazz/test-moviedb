@@ -56,6 +56,8 @@ Además debe permitir visualizar información más detallada de cada película [
     No obstante, si no quedas conforme con la calidad de lo enviado, siéntete libre de continuar desarrollando y nosotros felices lo revisamos. Lo único que te pedimos es que cuando nos envíes la primera entrega nos indiques que seguirás mejorando tu propuesta de modo de tenerlo en cuenta en el proceso. Considera que el plazo máximo para mejoras no podrá superar las 24 horas posteriores a la entrega. Cómo te decíamos la documentación será un excelente complemento.
     ¡Te deseamos un buen codeo!
 
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
