@@ -6,6 +6,7 @@
 - Se hace uso de React Hooks para el manejo de estado, el cual se encuentra principalmente ubicado en `App.js` y desde ahí se lo distribuye a los componentes hijos.
 - Se evita el uso de "magic strings" y se ha ubicado el copy que se utiliza en el proyecto en archivos `.json`.
 - Para el carrousel se hizo uso de la librería `Swiper.js`.
+- Para los estilos se hizo uso de `styled-components` principalmente y archivos `.css` mínimamente.
 
 ## Instrucciones
 
