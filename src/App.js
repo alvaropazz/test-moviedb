@@ -22,7 +22,11 @@ const App = () => {
   }, []);
 
   const [show, setShow] = useState(false);
-  const showModal = () => {
+
+  const [modalMovie, setModalMovie] = useState({});
+
+  const showModal = (movie) => {
+    setModalMovie(movie);
     setShow(true);
   };
 
@@ -37,25 +41,22 @@ const App = () => {
         title={popular.title}
         subtitle={popular.subtitle}
         data={popularMovies}
+        showModal={showModal}
       />
       <Carrousel
         title={topRated.title}
         subtitle={topRated.subtitle}
         data={topRatedMovies}
+        showModal={showModal}
       />
       <Carrousel
         title={upcoming.title}
         subtitle={upcoming.subtitle}
         data={upcomingMovies}
+        showModal={showModal}
       />
 
-      <button
-        type="button"
-        onClick={() => showModal()}
-        style={{ height: "1vh" }}
-      ></button>
-
-      <Modal handleClose={hideModal} show={show} />
+      <Modal handleClose={hideModal} show={show} modalMovie={modalMovie} />
     </div>
   );
 };
